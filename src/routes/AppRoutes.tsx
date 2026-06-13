@@ -38,6 +38,7 @@ function AppRoutes() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/account" element={<Account />} />
         <Route path="/order-failure" element={<OrderFailure />} />
+        <Route path="/demo" element={<Home />} />
 
 
       </Routes>
