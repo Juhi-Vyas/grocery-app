@@ -6,6 +6,16 @@ import OTP from "../pages/OTP";
 import Location from "../pages/Location";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
+import Home from "../pages/Home";
+import Explore from "../pages/Explore";
+import Products from "../pages/Products";
+import ProductDetails from "../pages/ProductDetails";
+import Cart from "../pages/Cart";
+import Checkout from "../pages/Checkout";
+import OrderSuccess from "../pages/OrderSuccess";
+import Favorites from "../pages/Favorites";
+import Account from "../pages/Account";
+import OrderFailure from "../pages/OrderFailure";
 
 function AppRoutes() {
   return (
@@ -18,7 +28,20 @@ function AppRoutes() {
         <Route path="/location" element={<Location />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/products/:category" element={<Products />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/order-success" element={<OrderSuccess />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/order-failure" element={<OrderFailure />} />
+
+
       </Routes>
+
     </BrowserRouter>
   );
 }

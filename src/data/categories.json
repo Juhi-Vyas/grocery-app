@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Fresh Fruits & Vegetable",
+    "slug": "fresh-fruits-vegetables",
+    "image": "🍎"
+  },
+  {
+    "id": 2,
+    "name": "Cooking Oil & Ghee",
+    "slug": "cooking-oil-ghee",
+    "image": "🫒"
+  },
+  {
+    "id": 3,
+    "name": "Meat & Fish",
+    "slug": "meat-fish",
+    "image": "🐟"
+  },
+  {
+    "id": 4,
+    "name": "Bakery & Snacks",
+    "slug": "bakery-snacks",
+    "image": "🥖"
+  },
+  {
+    "id": 5,
+    "name": "Dairy & Eggs",
+    "slug": "dairy-eggs",
+    "image": "🥛"
+  },
+  {
+    "id": 6,
+    "name": "Beverages",
+    "slug": "beverages",
+    "image": "🥤"
+  }
+]

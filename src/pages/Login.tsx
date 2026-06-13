@@ -1,9 +1,12 @@
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+
+  const navigate = useNavigate();
 
   return (
     <div className="h-screen bg-white p-6 flex flex-col">
@@ -67,17 +70,18 @@ function Login() {
 
       {/* Login Button */}
       <button
-        className="
-          mt-8
-          bg-green-500
-          text-white
-          py-4
-          rounded-xl
-          font-medium
-        "
-      >
-        Log In
-      </button>
+  onClick={() => navigate("/home")}
+  className="
+    mt-8
+    bg-green-500
+    text-white
+    py-4
+    rounded-xl
+    font-medium
+  "
+>
+  Log In
+</button>
 
 
       {/* Signup Link */}

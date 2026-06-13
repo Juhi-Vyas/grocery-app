@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Organic Banana",
+    "price": 4.99,
+    "quantity": "7pcs",
+    "category": "Fresh Fruits & Vegetable",
+    "image": "🍌",
+    "description": "Fresh organic bananas directly from the farm."
+  },
+  {
+    "id": 2,
+    "name": "Red Apple",
+    "price": 5.99,
+    "quantity": "1kg",
+    "category": "Fresh Fruits & Vegetable",
+    "image": "🍎",
+    "description": "Sweet and fresh red apples."
+  },
+  {
+    "id": 3,
+    "name": "Bell Pepper",
+    "price": 3.99,
+    "quantity": "1kg",
+    "category": "Fresh Fruits & Vegetable",
+    "image": "🫑",
+    "description": "Fresh green bell peppers."
+  },
+  {
+    "id": 4,
+    "name": "Chicken Meat",
+    "price": 12.99,
+    "quantity": "1kg",
+    "category": "Meat & Fish",
+    "image": "🍗",
+    "description": "Fresh chicken meat."
+  },
+  {
+    "id": 5,
+    "name": "Fresh Milk",
+    "price": 2.99,
+    "quantity": "1L",
+    "category": "Dairy & Eggs",
+    "image": "🥛",
+    "description": "Pure dairy milk."
+  },
+  {
+    "id": 6,
+    "name": "Orange Juice",
+    "price": 3.49,
+    "quantity": "1L",
+    "category": "Beverages",
+    "image": "🧃",
+    "description": "Fresh orange juice."
+  }
+]
