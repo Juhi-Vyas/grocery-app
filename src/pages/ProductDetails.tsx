@@ -18,10 +18,10 @@ function ProductDetails() {
 
   const product = products.find((item) => item.id === Number(id));
 
-   const productId = Number(id);
+  const productId = Number(id);
 
   const isFavorite = useFavoriteStore((state) => state.isFavorite(productId));
-  
+
   const toggleFavorite = useFavoriteStore((state) => state.toggleFavorite);
 
   const [quantity, setQuantity] = useState(1);
@@ -52,17 +52,18 @@ function ProductDetails() {
     }
   };
 
- 
-
-
   return (
     <div className="min-h-screen bg-white">
       {/* Top Section */}
       <div className="bg-gray-100 rounded-b-3xl p-5">
         <BackButton />
 
-        <div className="flex justify-center mt-10">
-          <span className="text-8xl">{product.image}</span>
+        <div className="flex justify-center">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-48 h-48 object-contain"
+          />
         </div>
       </div>
 

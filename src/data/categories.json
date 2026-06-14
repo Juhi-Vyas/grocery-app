@@ -3,36 +3,36 @@
     "id": 1,
     "name": "Fresh Fruits & Vegetable",
     "slug": "fresh-fruits-vegetables",
-    "image": "🍎"
+    "image": "/images/categories/fruit&veg.svg"
   },
   {
     "id": 2,
     "name": "Cooking Oil & Ghee",
     "slug": "cooking-oil-ghee",
-    "image": "🫒"
+    "image": "/images/categories/oil&ghee.svg"
   },
   {
     "id": 3,
     "name": "Meat & Fish",
     "slug": "meat-fish",
-    "image": "🐟"
+    "image": "/images/categories/meat&fish.svg"
   },
   {
     "id": 4,
     "name": "Bakery & Snacks",
     "slug": "bakery-snacks",
-    "image": "🥖"
+    "image": "/images/categories/bakery.svg"
   },
   {
     "id": 5,
     "name": "Dairy & Eggs",
     "slug": "dairy-eggs",
-    "image": "🥛"
+    "image": "/images/categories/dairy.svg"
   },
   {
     "id": 6,
     "name": "Beverages",
     "slug": "beverages",
-    "image": "🥤"
+    "image": "/images/categories/beverages.svg"
   }
 ]

@@ -16,7 +16,7 @@ function Location() {
       {/* Location Image */}
       <div className="flex justify-center mt-4">
         <div className="text-6xl">
-          📍
+          <img src="/images/products/location.svg" alt="" />
         </div>
       </div>
 

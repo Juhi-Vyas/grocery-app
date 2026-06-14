@@ -13,7 +13,9 @@ function Login() {
 
       {/* Logo */}
       <div className="flex justify-center mt-10">
-        <span className="text-4xl">🥕</span>
+        <span className="text-4xl">
+          <img src="images/products/Group.svg" alt="" />
+        </span>
       </div>
 
       {/* Heading */}

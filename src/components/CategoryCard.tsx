@@ -14,20 +14,38 @@ function CategoryCard({ category }: CategoryCardProps) {
         md:min-w-[180px]
         bg-green-100
         rounded-2xl
-        p-4
-        flex flex-col items-center
+        p-5
+        flex
+        flex-col
+        items-center
         justify-center
         text-center
-        transition-transform duration-200
+        transition-all
+        duration-200
         hover:scale-105
-        hover:shadow-md
+        hover:shadow-lg
       "
     >
-      <span className="text-5xl">
-        {category.image}
-      </span>
+      {/* Category Image */}
+      <img
+        src={category.image}
+        alt={category.name}
+        className="
+          w-20
+          h-20
+          object-contain
+        "
+      />
 
-      <h3 className="mt-3 text-sm font-medium">
+      {/* Category Name */}
+      <h3
+        className="
+          mt-4
+          text-sm
+          font-semibold
+          text-gray-800
+        "
+      >
         {category.name}
       </h3>
     </Link>

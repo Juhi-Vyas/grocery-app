@@ -10,19 +10,16 @@ import SectionHeader from "../components/SectionHeader";
 function Home() {
   return (
     <div className="min-h-screen bg-white pb-24">
-
       {/* Logo */}
       <div className="pt-8 flex justify-center">
         <span className="text-4xl">
-          🥕
+          <img src="/images/products/Group.svg" alt="" />
         </span>
       </div>
 
       {/* Location */}
       <div className="text-center mt-2">
-        <p className="font-medium">
-          Dhaka, Banassre
-        </p>
+        <p className="font-medium">Dhaka, Banassre</p>
       </div>
 
       {/* Search */}
@@ -41,63 +38,56 @@ function Home() {
         />
       </div>
 
-
       {/* Banner */}
       <div className="mx-5 mt-5">
         <div
           className="
-            bg-green-100
-            rounded-xl
-            h-28
-            flex
-            items-center
-            justify-center
-            text-xl
-            font-semibold
-          "
+      rounded-xl
+      h-28
+      bg-cover
+      bg-center
+      flex
+      items-center
+      justify-center
+      text-xl
+      font-semibold
+      text-white
+    "
+          style={{
+            backgroundImage: "url('/images/products/banner.svg')",
+          }}
         >
           Fresh Vegetables
         </div>
       </div>
 
-
       {/* Product sections will come here */}
 
       <SectionHeader title="Exclusive Offer" />
 
-<div className="flex gap-4 overflow-x-auto px-5 mt-4">
-  {products.slice(0, 3).map((product) => (
-    <ProductCard
-      key={product.id}
-      product={product}
-    />
-  ))}
-</div>
+      <div className="flex gap-4 overflow-x-auto px-5 mt-4">
+        {products.slice(0, 3).map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
 
-<SectionHeader title="Best Selling" />
+      <SectionHeader title="Best Selling" />
 
-<div className="flex gap-4 overflow-x-auto px-5 mt-4">
-  {products.slice(3, 6).map((product) => (
-    <ProductCard
-      key={product.id}
-      product={product}
-    />
-  ))}
-</div>
+      <div className="flex gap-4 overflow-x-auto px-5 mt-4">
+        {products.slice(3, 6).map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
 
-<SectionHeader title="Groceries" />
+      <SectionHeader title="Groceries" />
 
-<div className="flex gap-4 overflow-x-auto px-5 mt-4 mb-6">
-  {categories.map((category) => (
-    <CategoryCard
-      key={category.id}
-      category={category}
-    />
-  ))}
-</div>
+      <div className="flex gap-4 overflow-x-auto px-5 mt-4 mb-6">
+        {categories.map((category) => (
+          <CategoryCard key={category.id} category={category} />
+        ))}
+      </div>
 
       <BottomNav />
-
     </div>
   );
 }

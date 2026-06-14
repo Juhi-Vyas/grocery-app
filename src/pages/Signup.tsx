@@ -10,7 +10,9 @@ function Signup() {
 
       {/* Logo */}
       <div className="flex justify-center mt-10">
-        <span className="text-4xl">🥕</span>
+        <span className="text-4xl">
+          <img src="" alt="" />
+        </span>
       </div>
 
       {/* Heading */}
