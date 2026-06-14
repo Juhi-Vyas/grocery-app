@@ -4,34 +4,58 @@ function OrderSuccess() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-center p-6">
+    <div className="min-h-screen bg-white px-8 flex flex-col items-center justify-center">
 
-      {/* Success Icon */}
-      <div className="text-8xl">
-        ✅
-      </div>
+      {/* Success Image */}
+      <img
+        src="/images/products/order-success.svg"
+        alt="Order Accepted"
+        className="
+          w-56
+          h-56
+          object-contain
+        "
+      />
 
       {/* Title */}
-      <h1 className="text-3xl font-bold mt-8">
+      <h1
+        className="
+          mt-10
+          text-[28px]
+          font-semibold
+          text-center
+          leading-9
+          text-[#181725]
+        "
+      >
         Your Order has been accepted
       </h1>
 
       {/* Description */}
-      <p className="text-gray-500 text-center mt-4">
-        Your items have been placed and are on their way
-        to being processed.
+      <p
+        className="
+          mt-4
+          text-center
+          text-gray-400
+          text-[16px]
+          leading-6
+        "
+      >
+        Your items have been placed and are on
+        their way to being processed
       </p>
 
       {/* Track Order Button */}
       <button
         className="
-          mt-12
           w-full
-          bg-green-500
-          text-white
-          py-4
+          h-16
+          mt-16
           rounded-2xl
-          font-medium
+          bg-[#53B175]
+          text-white
+          text-lg
+          font-semibold
         "
       >
         Track Order
@@ -41,8 +65,9 @@ function OrderSuccess() {
       <button
         onClick={() => navigate("/home")}
         className="
-          mt-4
-          text-black
+          mt-6
+          text-[#181725]
+          text-[16px]
           font-medium
         "
       >

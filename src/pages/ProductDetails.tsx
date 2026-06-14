@@ -5,6 +5,7 @@ import {
   Plus,
   Minus,
   ChevronRight,
+  Star,
 } from "lucide-react";
 
 import BackButton from "../components/BackButton";
@@ -216,18 +217,39 @@ function ProductDetails() {
 
 
         {/* Reviews */}
-        <div className="flex justify-between items-center">
+<div className="flex justify-between items-center">
 
-          <h3 className="font-semibold">
-            Review
-          </h3>
+  <h3 className="font-semibold">
+    Review
+  </h3>
 
-          <div className="flex items-center gap-2">
-            ⭐⭐⭐⭐⭐
-            <ChevronRight />
-          </div>
+  <div className="flex items-center gap-1">
 
-        </div>
+    {[...Array(5)].map((_, index) => (
+      <span
+        key={index}
+        className={`text-lg ${
+          index < Math.round(product.rating)
+            ? "text-yellow-400"
+            : "text-gray-300"
+        }`}
+      >
+        ★
+      </span>
+    ))}
+
+    <span className="text-sm font-medium ml-1">
+      {product.rating.toFixed(1)}
+    </span>
+
+    <ChevronRight
+      size={18}
+      className="text-gray-500 ml-1"
+    />
+
+  </div>
+
+</div>
 
 
         {/* Add To Basket */}

@@ -11,6 +11,8 @@ import FilterModal from "../components/FilterModal";
 
 import { useProductStore } from "../store/productStore";
 
+import SkeletonCard from "../components/SkeletonCard";
+
 
 function Search() {
 
@@ -159,7 +161,11 @@ function Search() {
 
         {loading ? (
 
-          <p>Loading...</p>
+          <>
+  {[...Array(4)].map((_, index) => (
+    <SkeletonCard key={index} />
+  ))}
+</>
 
         ) : filteredProducts.length > 0 ? (
 

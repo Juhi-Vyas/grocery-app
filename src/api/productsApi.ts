@@ -74,5 +74,6 @@ export async function getProducts(): Promise<Product[]> {
   description: item.description,
   category: getCategory(item.title),
   brand: item.brand || "Individual Collection",
+  rating: item.rating,
 }));
 }

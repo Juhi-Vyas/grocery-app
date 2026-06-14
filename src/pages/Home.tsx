@@ -10,6 +10,8 @@ import SectionHeader from "../components/SectionHeader";
 import categories from "../data/categories.json";
 import { useProductStore } from "../store/productStore";
 
+import SkeletonCard from "../components/SkeletonCard";
+
 function Home() {
   const navigate = useNavigate();
 
@@ -29,7 +31,13 @@ function Home() {
   if (loading) {
     return (
       <div className="h-screen flex justify-center items-center">
-        Loading products...
+        <div className="p-5">
+  <div className="flex gap-4 overflow-hidden">
+    {[...Array(3)].map((_, index) => (
+      <SkeletonCard key={index} />
+    ))}
+  </div>
+</div>
       </div>
     );
   }
