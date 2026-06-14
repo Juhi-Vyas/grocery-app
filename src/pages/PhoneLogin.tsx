@@ -1,53 +1,172 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
 
 function PhoneLogin() {
+  const [countryCode, setCountryCode] = useState("+91");
+  const [phone, setPhone] = useState("");
 
   const navigate = useNavigate();
 
   return (
-    <div className="h-screen bg-white p-5 flex flex-col">
-      
-      {/* Back Button */}
-      <button className="mb-10">
-        <ArrowLeft size={22} />
-      </button>
+    <div className="min-h-screen bg-white flex flex-col">
 
-      {/* Heading */}
-      <h1 className="text-2xl font-se~mibold">
-        Enter your mobile number
-      </h1>
-
-      {/* Input Section */}
-      <div className="mt-12">
-        <p className="text-gray-500 text-sm mb-2">
-          Mobile Number
-        </p>
-
-        <div className="flex items-center border-b pb-3">
-          <span className="text-xl mr-3">🇮🇳</span>
-
-          <span className="mr-3 text-gray-700">
-            +91
-          </span>
-
-          <input
-            type="tel"
-            placeholder="9876543210"
-            className="outline-none flex-1"
-          />
-        </div>
+      {/* Top Image */}
+      <div>
+        <img
+          src="/images/products/signin.svg"
+          alt="Sign In"
+          className="w-full h-[300px] object-cover"
+        />
       </div>
 
-      {/* Next Button */}
-      <div className="flex justify-end mt-auto mb-10">
-        <button
-  onClick={() => navigate("/otp")}
-  className="bg-green-500 text-white w-14 h-14 rounded-full 
-  flex items-center justify-center"
+      {/* Content */}
+      <div className="px-7 mt-8">
+
+        {/* Heading */}
+        <h1 className="text-[28px] font-semibold leading-9 text-[#181725]">
+          Get your groceries
+          <br />
+          with nectar
+        </h1>
+
+
+        {/* Phone Input */}
+        <div className="mt-8">
+          <div className="flex items-center gap-3 border-b pb-4">
+
+            {/* Country Select */}
+            <select
+              value={countryCode}
+              onChange={(e) => setCountryCode(e.target.value)}
+              className="
+                bg-transparent
+                outline-none
+                text-[15px]
+                font-medium
+                cursor-pointer
+              "
+            >
+              <option value="+91">
+                🇮🇳 +91
+              </option>
+
+              <option value="+1">
+                🇺🇸 +1
+              </option>
+
+              <option value="+44">
+                🇬🇧 +44
+              </option>
+
+              <option value="+971">
+                🇦🇪 +971
+              </option>
+
+              <option value="+880">
+                🇧🇩 +880
+              </option>
+
+              <option value="+61">
+                🇦🇺 +61
+              </option>
+
+              <option value="+81">
+                🇯🇵 +81
+              </option>
+            </select>
+
+
+            {/* Phone Number */}
+            <input
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              placeholder="Enter mobile number"
+              className="
+                flex-1
+                outline-none
+                text-[16px]
+                placeholder:text-gray-400
+              "
+            />
+
+          </div>
+
+          <button
+  onClick={() => navigate("/login")}
+  className="
+    w-full
+    mt-8
+    h-14
+    rounded-xl
+    bg-[#53B175]
+    text-white
+    font-semibold
+  "
 >
-  <ArrowRight size={20}/>
+  Continue
 </button>
+        </div>
+
+
+        {/* Divider */}
+        <p className="text-center text-gray-400 text-sm mt-10">
+          Or connect with social media
+        </p>
+
+
+        {/* Google Button */}
+        <button
+          className="
+            w-full
+            h-16
+            mt-8
+            rounded-xl
+            bg-[#5383EC]
+            text-white
+            font-medium
+            flex
+            items-center
+            justify-center
+            gap-3
+          "
+        >
+          <img
+            src="/images/products/google.svg"
+            alt="Google"
+            className="w-5 h-5"
+          />
+
+          Continue with Google
+        </button>
+
+
+        {/* Facebook Button */}
+        <button
+          className="
+            w-full
+            h-16
+            mt-4
+            rounded-xl
+            bg-[#4A66AC]
+            text-white
+            font-medium
+            flex
+            items-center
+            justify-center
+            gap-3
+          "
+        >
+          <img
+            src="/images/products/facebook.svg"
+            alt="Facebook"
+            className="w-5 h-5"
+          />
+
+          Continue with Facebook
+        </button>
+
       </div>
     </div>
   );
