@@ -110,7 +110,6 @@ function Home() {
               "url('/images/products/banner.svg')",
           }}
         >
-          Fresh Vegetables
         </div>
       </div>
 

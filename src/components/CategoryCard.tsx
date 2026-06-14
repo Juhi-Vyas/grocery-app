@@ -39,31 +39,33 @@ function CategoryCard({ category }: CategoryCardProps) {
 
   return (
     <Link
-      to={`/products/${category.slug}`}
-      className={`
-        h-[190px]
-        rounded-2xl
-        border
-        ${color.bg}
-        ${color.border}
-        flex
-        flex-col
-        items-center
-        justify-center
-        text-center
-        px-3
-        transition-all
-        duration-200
-        hover:scale-[1.03]
-      `}
-    >
+  to={`/products/${category.slug}`}
+  className={`
+    w-[170px]
+    h-[190px]
+    flex-shrink-0
+    rounded-2xl
+    border
+    ${color.bg}
+    ${color.border}
+    flex
+    flex-col
+    items-center
+    justify-center
+    text-center
+    px-3
+    transition-all
+    duration-200
+    hover:scale-[1.03]
+  `}
+>
       {/* Image */}
       <img
         src={category.image}
         alt={category.name}
         className="
-          w-24
-          h-24
+          w-20
+          h-20
           object-contain
         "
       />
@@ -72,7 +74,7 @@ function CategoryCard({ category }: CategoryCardProps) {
       <h3
         className="
           mt-4
-          text-[15px]
+          text-[16px]
           font-semibold
           text-[#181725]
           leading-5
