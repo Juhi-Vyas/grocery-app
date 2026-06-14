@@ -66,12 +66,13 @@ export async function getProducts(): Promise<Product[]> {
   const data = await response.json();
 
   return data.products.map((item: any) => ({
-    id: item.id,
-    name: item.title,
-    price: item.price,
-    quantity: "1kg",
-    image: item.thumbnail,
-    description: item.description,
-    category: getCategory(item.title),
-  }));
+  id: item.id,
+  name: item.title,
+  price: item.price,
+  quantity: "1kg",
+  image: item.thumbnail,
+  description: item.description,
+  category: getCategory(item.title),
+  brand: item.brand || "Individual Collection",
+}));
 }

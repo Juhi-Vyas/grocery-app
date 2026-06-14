@@ -1,62 +1,55 @@
+import { Search } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
 import categories from "../data/categories.json";
 import CategoryCard from "../components/CategoryCard";
 import BottomNav from "../components/BottomNav";
-import { Search } from "lucide-react";
 
 function Explore() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-white pb-24">
 
       {/* Heading */}
-      <div className="pt-8">
-        <h1 className="text-[22px] font-semibold text-center">
-          Find Products
-        </h1>
-      </div>
+      <h1 className="text-[22px] font-semibold text-center pt-8">
+        Find Products
+      </h1>
+
 
       {/* Search */}
       <div className="px-5 mt-6">
-        <div
+
+        <button
+          onClick={() => navigate("/search")}
           className="
-            flex
-            items-center
-            gap-3
+            w-full
+            h-14
             bg-[#F2F3F2]
             rounded-2xl
+            flex
+            items-center
             px-4
-            h-14
+            gap-3
+            text-gray-500
           "
         >
-          <Search
-            size={20}
-            className="text-gray-500"
-          />
+          <Search size={20}/>
+          Search Store
+        </button>
 
-          <input
-            type="text"
-            placeholder="Search Store"
-            className="
-              bg-transparent
-              w-full
-              outline-none
-              text-sm
-              text-gray-700
-            "
-          />
-        </div>
       </div>
 
+
       {/* Categories */}
-      <div
-        className="
-          grid
-          grid-cols-2
-          gap-4
-          px-5
-          mt-5
-          mb-5
-        "
-      >
+      <div className="
+        grid
+        grid-cols-2
+        gap-4
+        px-5
+        mt-5
+        mb-5
+      ">
         {categories.map((category) => (
           <CategoryCard
             key={category.id}
@@ -65,7 +58,9 @@ function Explore() {
         ))}
       </div>
 
+
       <BottomNav />
+
     </div>
   );
 }

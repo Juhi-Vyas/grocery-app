@@ -17,6 +17,8 @@ import Favorites from "../pages/Favorites";
 import Account from "../pages/Account";
 import OrderFailure from "../pages/OrderFailure";
 
+import Search from "../pages/Search";
+
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -39,7 +41,7 @@ function AppRoutes() {
         <Route path="/account" element={<Account />} />
         <Route path="/order-failure" element={<OrderFailure />} />
         <Route path="/demo" element={<Home />} />
-
+        <Route path="/search" element={<Search />} />
 
       </Routes>
 

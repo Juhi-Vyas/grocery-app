@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { Search } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 import BottomNav from "../components/BottomNav";
 import ProductCard from "../components/ProductCard";
@@ -9,6 +11,8 @@ import categories from "../data/categories.json";
 import { useProductStore } from "../store/productStore";
 
 function Home() {
+  const navigate = useNavigate();
+
   const {
     products,
     loading,
@@ -16,31 +20,24 @@ function Home() {
     fetchProducts,
   } = useProductStore();
 
-  // Fetch products only once
   useEffect(() => {
     if (products.length === 0) {
       fetchProducts();
     }
   }, [products.length, fetchProducts]);
 
-  // Loading state
   if (loading) {
     return (
-      <div className="h-screen flex items-center justify-center">
-        <h2 className="text-green-500 text-lg font-medium">
-          Loading products...
-        </h2>
+      <div className="h-screen flex justify-center items-center">
+        Loading products...
       </div>
     );
   }
 
-  // Error state
   if (error) {
     return (
-      <div className="h-screen flex items-center justify-center">
-        <h2 className="text-red-500 text-lg font-medium">
-          {error}
-        </h2>
+      <div className="h-screen flex justify-center items-center text-red-500">
+        {error}
       </div>
     );
   }
@@ -58,28 +55,32 @@ function Home() {
       </div>
 
       {/* Location */}
-      <div className="text-center mt-2">
-        <p className="font-medium text-gray-700">
-          Dhaka, Banassre
-        </p>
-      </div>
+      <p className="text-center mt-2 font-medium">
+        Dhaka, Banassre
+      </p>
+
 
       {/* Search */}
       <div className="px-5 mt-5">
-        <input
-          type="text"
-          placeholder="Search Store"
+        <button
+          onClick={() => navigate("/search")}
           className="
             w-full
+            h-14
             bg-gray-100
             rounded-xl
+            flex
+            items-center
             px-4
-            py-3
-            outline-none
-            text-sm
+            gap-3
+            text-gray-500
           "
-        />
+        >
+          <Search size={20} />
+          Search Store
+        </button>
       </div>
+
 
       {/* Banner */}
       <div className="mx-5 mt-5">
@@ -90,8 +91,8 @@ function Home() {
             bg-cover
             bg-center
             flex
-            items-center
             justify-center
+            items-center
             text-white
             text-xl
             font-semibold
@@ -105,7 +106,7 @@ function Home() {
         </div>
       </div>
 
-      {/* Exclusive Offer */}
+
       <SectionHeader title="Exclusive Offer" />
 
       <div className="flex gap-4 overflow-x-auto px-5 mt-4">
@@ -117,7 +118,7 @@ function Home() {
         ))}
       </div>
 
-      {/* Best Selling */}
+
       <SectionHeader title="Best Selling" />
 
       <div className="flex gap-4 overflow-x-auto px-5 mt-4">
@@ -129,10 +130,10 @@ function Home() {
         ))}
       </div>
 
-      {/* Groceries Categories */}
+
       <SectionHeader title="Groceries" />
 
-      <div className="flex gap-4 overflow-x-auto px-5 mt-4 mb-6">
+      <div className="flex gap-4 overflow-x-auto px-5 mt-4">
         {categories.map((category) => (
           <CategoryCard
             key={category.id}
@@ -141,7 +142,7 @@ function Home() {
         ))}
       </div>
 
-      {/* Bottom Navigation */}
+
       <BottomNav />
     </div>
   );
