@@ -5,7 +5,6 @@ import {
   Plus,
   Minus,
   ChevronRight,
-  Star,
 } from "lucide-react";
 
 import BackButton from "../components/BackButton";
